@@ -8,12 +8,12 @@
     <!--引入自己写的game.css-->
     <link rel="stylesheet" href="{% static 'css/game.css' %}">
     <!--引入自己写的game.js-->
-    <script src="{% static 'js/dist/game.js' %}"></script>
 </head>
 
 <body style="margin: 0">
     <div id="ac_game_12345678"></div>
-    <script>
+    <script type="module">
+        import {AcGame} from "{% static 'js/dist/game.js' %}";
         $(document).ready(function(){
             let ac_game = new AcGame("ac_game_12345678");
         });
